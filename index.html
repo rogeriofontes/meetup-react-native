@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Workshop - React Native </title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				<h3>Workshop - ReactNative</h3>
+					<h6>Como sair da maldição do Hello World</h6>
+					<img data-src="img/react-native.png" width="400" height="300" border="0">
+					<p>
+						<small>Palestrante: <a href="http://rogeriofontes.inf.br" target="_blank">Rogério Fontes</a> / <a href="http://twitter.com/rogeriofontes" target="_blank">@rogeriofontes</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h5>Sobre o palestrante:</h5>
+					<p><span style="font-size:22px">APAIXONADO EM MANEIRAS E FORMAS ÁGEIS DE CRIAR CÓDIGO FONTE. PROGRAMANDO SEMPRE TOMANDO UM BOM CAFÉ E ESCUTANDO UM BELO E PESADO ROCK`N ROLL. TRABALHA A MAIS DE 10 ANOS COM JAVA E LINUX, PASSANDO POR ANDROID, PYTHON, PHP E AGORA COM O CORAÇÃO NO ANGULAR.JS E NODE.JS. PROFESSOR UNIVERSITÁRIO DE REDES DE COMPUTADORES, JAVA E DISPOSITIVOS MÓVEIS. JUGLEADER E CO-FUNDADOR DO UAIJUG (GRUPO DE USUÁRIOS DO TRIÂNGULO MINEIRO) E DO TRIÂNGULO HACKERSPACE. ALÉM DISSO AVENTURANDO COMO EMPREENDEDOR E ARQUITETO MÓBILE EVERIS E APAIXONADO POR ESTUDOS MÚSICAIS. </p>
+				</section>
+
+				<section>
+					<a href="http://www.uaijug.com.br/" target="_blank"><img data-src="img/uaijug-300.png" width="350" height="250"></a>
+					<a href="http://www.triangulohackerspace.net.br/" target="_blank"><img data-src="img/150px-Logo_triangulohs.png" width="350" height="250"></a>
+				</section>
+
+				<section>
+					<h5>Apresentar a estrutura - Everis</h5>
+					<a href="Carreira-Frente-Mobile-everis.pptx"><img data-src="img/apresentacao.png"></a>
+				</section>
+
+				<section>
+					<h5>Porque React?</h5>
+					<p><span style="font-size:22px">
+					  É uma biblioteca javascript para criar interfaces do Facebook e Instagram. <br /> O React foi criado para resolver o problema: Criar largar aplicações com dados que mudam a cada segundo.<br /> Virtual DOM: <br /> <a href="https://facebook.github.io/react-native/docs/getting-started.html" target="_blank">
+						<span style="font-size:22px">https://programmingwithmosh.com/react/react-virtual-dom-explained/</span></p>
+					</p>
+					<img data-src="img/1200px-React-icon.svg.png" width="400" height="250">
+				</section>
+
+				<section>
+					<h5>O que o React Native faz?</h5>
+					<p><span style="font-size:22px">
+						O que o React Native faz? Basicamente, ao contrário de aplicações web, que se utilizam da DOM do navegador para representar os elementos na UI, ele irá realizar chamadas nativas — Objective-C para dispositivos iOS e JAVA para Android — a fim de renderizar estes elementos.</p>
+						<img data-src="img/react-native.png" width="250" header="200">
+						<p><a href="https://facebook.github.io/react-native/docs/getting-started.html" target="_blank">
+						<span style="font-size:22px">https://facebook.github.io/react-native/docs/getting-started.html</span></a></p>
+				</section>
+
+				<section>
+					<h5>Como ele faz isso?</h5>
+					<p><span style="font-size:22px">Usando Bridge bridge</span></p>
+					<img data-src="img/bridge.png">
+				</section>
+
+				<section>
+					<h5>Vantagens de uma solução nativa?</h5>
+					<p><span style="font-size:23px">
+						As principais vantagens de uma aplicação nativa sobre uma aplicação web mobile (ex: ionic) são:
+						<ul style="font-size:28px">
+						  <li>Experiência do usuário fluída;</li>
+						  <li>Carregamentos em geral mais rápidos;</li>
+						  <li>Melhor integração entre funções do celular como câmera, giroscópio, etc;</li>
+						  <li>Segurança superior;</li>
+						  <li>Melhor performance em geral.</li>
+						</ul>
+					</span>
+					</p>
+				</section>
+
+				<section>
+					<h5>Como ele faz isso?</h5>
+					<p><span style="font-size:22px">Usando Bridge.</span></p>
+					<img data-src="img/bridge.png">
+				</section>
+				
+				<section>
+					<h5>Quando usamos bridge?</h5>
+					<p><span style="font-size:22px">
+						<ul style="font-size:28px">
+						  <li>Integração com third-party SDKs;</li>
+						  <li>Quando alta performance é crucial para a sua aplicação;</li>
+						  <li>Quando você está trabalhando com aplicativos já existentes (Android/iOS);</li>
+						  <li>Você precisa de acessar APIs da plataforma;</li>
+						</ul>
+					</span></p>
+					<img data-src="img/brigde.jpg">
+				</section>
+				
+				<section>
+					<h5>Arquitetura:</h5>
+					<img data-src="img/Iu8pj.png">
+				</section>
+				
+				<section>
+					<h3>Dispositivos ANDROID</h3>
+					<h6>JSCore virtual machine: Destinado ao nosso código JavaScript:</h6>
+					<p>Android Runtime: Para o código Java/Kotlin</p>
+				</section>
+				
+				<section>
+					<h3>Dispositivos IOS</h3>
+					<h6>JSCore virtual machine: Destinado ao nosso código JavaScript:</h6>
+					<p>Native Runtime: Para códigos Objective-C/Swift;</p>
+				</section>
+
+				<section>
+					<section>
+						<h5>Theads</h5>
+						<p><img data-src="img/thread.png" width="650" header="380"></p>
+					</section>
+					<section>
+						<p><span style="font-size:32px">Existem também três importantes threads sendo executadas em uma aplicação React Native, fora as que normalmente já são executadas por aplicações nativas em background.</p>
+					</section>
+					<section>
+						<p><span style="font-size:32px">A primeira delas é a main thread, que também é utilizada por qualquer aplicação nativa. Ela é responsável por tratar as requisições relacionadas a renderização de elementos na tela e também pelos gestos reproduzidos pelo usuário.
+</p>
+					</section>
+					<section>
+						<p><span style="font-size:32px">A segunda é exclusiva ao React Native, responsável por executar o código JavaScript. O JavaScript é o responsável por toda lógica de negócio da aplicação. Além de definir a estrutura e as funcionalidades da nossa UI.</p>
+					</section>
+					<section>
+						<p><span style="font-size:32px">São os nós (nodes) que respondem de acordo com os dados recebidos, sejam estes dados tratados ou não.</p>
+					</section>
+					<section>
+						<p><span style="font-size:32px">E por último, a **Shadow Queue **que é a responsável pelos cálculos referentes ao layout.</p>
+					</section>
+				</section>
+				<section>
+					<h5>Revisando: Aplicação React Native e Comunicação.</h5>
+					<p><span style="font-size:22px">
+					<ul style="font-size:24px">
+						<li>1. Em uma aplicação React Native temos dois reinos: Nativo e JavaScript;</li>
+						<li>2. Estes reinos se comunicam apenas através de uma Bridge;</li>
+						<li>3. A Bridge possui as seguintes características: assíncrona, serializada e agrupada;</li>
+						<li>4. Apesar da comunicação com a Bridge ser assíncrona, a MessageQueue é síncrona. Logo, ela interpreta as mensagens na ordem de chegada;</li>
+						<li>5. Uma aplicação React Native é realmente nativa, uma vez que seus componentes são renderizados nativamente;</li>
+						<li>6. Podemos visualizar os logs da Bridge utilizando .spy() ou o rn-snoopy;</li>
+						<li>7. Native Modules e UI Components</li>
+					</ul>
+					</span></p>
+				</section>
+				<section>
+					<h5>O que é estudar?.</h5>
+					<p><span style="font-size:22px">
+					<ul style="font-size:28px">
+						<li>JavaScript, ES6+;</li>
+						<li>TDD;</li>
+						<li>Programação Funcional;</li>
+						<li>Abstração de componentes;</li>
+						<li>PropTypes;</li>
+						<li>Webpack;</li>
+						<li>React e JSX;</li>
+						<li>Redux;</li>
+						<li>CSS/Flexbox</li>
+					</ul>
+					</span></p>
+				</section>
+				<section>
+					<h5>Referências</h5>
+					<p>
+					  <ul style="font-size:28px">
+						<li>https://www.lambda3.com.br/2018/12/lambda3-podcast-122-react-native/;</li>
+						<li>https://hipsters.tech/react-native-hipsters-148/;</li>
+						<li>https://www.infoq.com/br/presentations/react-native-no-banco-do-brasil-como-rn-nos-faz-poupar-1500-horas-por-projeto/;</li>
+						<li>https://www.schoolofnet.com/plano-de-estudo-react-native/;</li>
+						<li>http://gabsferreira.com/airbnb-desiste-do-react-native/;</li>
+						<li>https://www.opensoft.pt/portfolio-item/o-que-e-o-react-native/;</li>
+						<li>https://www.facebook.com/notes/devmedia/instalando-react-native-no-seu-mac/1984382714939960/;</li>
+						<li>https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox;</li>
+						<li>https://hackernoon.com/react-native-how-to-setup-your-first-app-a36c450a8a2f</li>
+					  </ul>
+					</p>
+				</section>				
+				<section>
+					<img data-src="img/thanks.jpg"  width="250" header="200">
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
